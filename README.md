@@ -1,11 +1,33 @@
 # Causes-of-Death
 
-I left this page for a sec and everything decided to disappear? Nice one.
-We continue after church.
+This analysis investigates patterns in causes of death across multiple countries over three decades. The dataset contains information solely on death causes, death numbers, countries, and respective years.
+
+### Renaming a column
+
+EXEC sp.rename 'Causes Of Death.Entity', 'Country', 'COLUMN'
+
+
+### Replacing values
+UPDATE [Causes Of Death]
+SET Country = 
+    CASE 
+        WHEN Country = 'United States' THEN 'United States of America'
+        ELSE Country
+    END
+WHERE Country = 'United States';
+
+UPDATE [Causes Of Death]
+SET Country = 
+    CASE 
+        WHEN Country = 'America' THEN 'United States of America'
+        ELSE Country
+    END
+WHERE Country = 'America';
+
 
 
 ### KPIs
-![](KPIs.png)
+![](KPI_C.png)
 
 
 ### Year with the highest number of deaths
