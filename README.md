@@ -121,6 +121,8 @@ ORDER BY total_deaths ASC;
 
 
 
+_See Medium article [here](https://medium.com/@prosperherbert2015/analyzing-the-global-leading-cause-of-death-728380fcdf70?source=user_profile---------0----------------------------)_
+
 
 
 
